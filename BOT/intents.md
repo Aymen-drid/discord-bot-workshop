@@ -21,7 +21,7 @@ There are two main types of intents in Discord:
 
 - **`Intents.default()`**: Grants basic access to events like messages, guilds, and reactions.
 - **`Intents.message_content`**: Grants access to message content, enabling the bot to read messages.
-- **`Intents.members`**: Allows the bot to listen for member events (e.g., when a member joins or leaves the server).
+- **`Intents.members`**: Allows the bot to listen for member events (e.g, when a member joins or leaves the server).
 - **`Intents.voice_states`**: Grants access to voice state events, allowing the bot to track changes in voice channels (e.g., when a member joins or leaves a voice channel).
 
 ### Example of Using Intents in a Bot
