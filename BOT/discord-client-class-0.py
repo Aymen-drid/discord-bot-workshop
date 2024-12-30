@@ -1,22 +1,32 @@
 import discord
+import os
+from dotenv import load_dotenv
 
-# Creating the client without specifying intents
-client = discord.Client()
+# def the targets for access
+intents = discord.Intents.default()
 
-# when the bot successfully connects to the server
+intents.message_content = True
+
+client = discord.Client(intents=intents)
+
+
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user}')
 
-# when the bot get a new message
 @client.event
 async def on_message(message):
-    # client user is the user who creates the bot 
+    
     if message.author == client.user:
-        await message.channel.send("You are admin !")
+        return 
 
-    if message.content == 'hello':
-        await message.channel.send('Hello, world!')
+    if message.content.lower() == 'hello': 
+        await message.channel.send('Hello, world!');
 
-# Run the bot with the token
-client.run('YOUR_BOT_TOKEN')
+
+load_dotenv()
+
+
+TOKEN = os.getenv('TOKEN')
+
+client.run(TOKEN)

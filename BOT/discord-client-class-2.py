@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import datetime
+import os 
+from dotenv import load_dotenv
 
 # Setup bot with intents
 intents = discord.Intents.default()
@@ -59,11 +61,18 @@ async def on_message_delete(message):
         )
         embed.add_field(name="Content", value=message.content or "No content")
         await log_channel.send(embed=embed)
-
-# Simple command to test if bot is working
+# ping is the name of the cmd
 @bot.command()
 async def ping(ctx):
     await ctx.send(f'Pong! Bot latency: {round(bot.latency * 1000)}ms')
 
-# Replace 'YOUR_TOKEN' with your bot's token
-bot.run('YOUR_TOKEN')
+# Define another command
+@bot.command()
+async def greet(ctx):
+    await ctx.send("Hi there! I'm your friendly bot.")
+load_dotenv()
+
+
+TOKEN = os.getenv('TOKEN')
+
+bot.run(TOKEN)
