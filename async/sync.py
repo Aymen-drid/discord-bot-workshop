@@ -11,12 +11,9 @@ async def task_2():
     print("Task 2: Done")
 
 async def main():
-    # Start both tasks concurrently
-    task1 = asyncio.create_task(task_1())
-    task2 = asyncio.create_task(task_2())
+    # Run tasks synchronously by awaiting each one
+    await task_1()  # This will run synchronously
+    await task_2()  # This will run after task_1 finishes
 
-    # Wait for both tasks to finish
-    await task1
-    await task2
-
+# Run the main function
 asyncio.run(main())
