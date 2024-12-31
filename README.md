@@ -1,35 +1,5 @@
 # Project Folder Structure
 
-## class_basics
-This folder contains materials and code examples related to Python classes, covering essential concepts and examples for beginners.
-
-### Contents:
-- **Defining Classes**: Basic structure and syntax for creating Python classes.
-- **Methods**: Demonstrates instance, class, and static methods.
-- **Inheritance**: Introduction to inheritance and how to extend classes in Python.
-
----
-
-## async_basics
-This folder contains materials related to asynchronous programming in Python, particularly using `asyncio` and related concepts.
-
-### Contents:
-- **Basics of `async` and `await`**: Overview of asynchronous programming and its syntax.
-- **Understanding Event Loops**: Detailed explanation of event loops and their role in async programming.
-- **Using `asyncio`**: Practical examples and use cases for `asyncio` in Python.
-
----
-
-## concepts
-This folder contains resources for creating and setting up a Discord bot using Python.
-
-### Subfolders:
-- **setup**: Instructions and code for setting up the Discord library.
-- **create_bot**: Scripts and guides for creating a Discord bot.
-- **linking_bot**: Steps to link your bot to Discord and test the integration.
-
----
-
 ## BOT
 This folder contains example projects related to a Discord bot, including different client implementations and configuration files.
 
